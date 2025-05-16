@@ -1,0 +1,50 @@
+1. Delete All PDFs in the Uploads Folder
+    
+    rm /Users/divyey007/Documents/rag_ats/app/uploads/*.pdf
+
+2. Delete the SQLite Database
+
+    rm /Users/divyey007/Documents/rag_ats/app/app.db
+
+3. (Optional) Delete the FAISS Vector Store
+
+    rm /Users/divyey007/Documents/rag_ats/app/vectorstore_faiss.faiss
+    rm /Users/divyey007/Documents/rag_ats/app/embedding_store.pkl
+
+4. Restart Your FastAPI App
+
+    uvicorn app.main:app --reload --port 8080
+
+5. Upload New Resumes : <<< Use your /upload/ endpoint as usual. >>>
+
+6. Inspect All Columns and Values in SQLite
+
+    A. Open the SQLite Shell
+        sqlite3 /Users/divyey007/Documents/rag_ats/app/app.db
+        <OR> sqlite3 app.db
+
+    B. Show All Columns in the resumes Table
+        PRAGMA table_info(resumes);
+
+    C. View All Rows/Values
+        .headers on
+        .mode column
+        SELECT * FROM resumes;
+        
+    D. Exit
+        .quit
+
+// CHECKS
+
+// To See All Resumes and Their Hashes
+.headers on
+.mode column
+SELECT id, pdf_path, pdf_hash, name, email, job_title FROM resumes;
+
+// If You Want to Check for Duplicates
+SELECT pdf_hash, COUNT(*) as cnt FROM resumes GROUP BY pdf_hash HAVING cnt > 1;
+
+//If You Want to See Everything
+.headers on
+.mode column
+SELECT * FROM resumes;

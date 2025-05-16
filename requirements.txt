@@ -1,0 +1,62 @@
+# --- Backend Frameworks ---
+fastapi
+uvicorn
+Flask
+Flask_Cors
+
+# --- Environment & Data Handling ---
+python-dotenv
+python-multipart
+pydantic
+sqlalchemy
+
+# --- PDF & Image Processing ---
+pdfplumber
+pdf2image
+pypdf
+Pillow
+
+# --- OpenAI + LangChain + Embeddings ---
+openai
+langchain
+langchain-community
+langchain-openai
+sentence-transformers
+tiktoken
+
+# --- Vector Databases ---
+faiss-cpu
+# chromadb
+
+# --- ML & NLP Tools ---
+scikit-learn
+
+# --- UI / Interface ---
+gradio
+streamlit
+
+# --- Optional: Frontend Icons for React ---
+# npm install react-icons --save
+# OR
+# yarn add react-icons
+
+# --- Optional: PostgreSQL + Migration Tools ---
+# pip install alembic sqlalchemy psycopg2-binary
+
+# --- Note ---
+# If using GPU instead of CPU for FAISS:
+# pip install faiss-gpu
+
+# pip install fastapi uvicorn sqlalchemy python-multipart python-dotenv openai pymupdf
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+pymupdf
+openai
+faiss-cpu
+numpy
+alembic
+#pip install python-jose[cryptography] passlib[bcrypt]
+python-jose[cryptography]
+passlib[bcrypt]

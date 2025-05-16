@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+
+# SQLite and pickle files
+app.db
+embedding_store.pkl
+vectorstore_faiss.faiss
+
+# Uploads
+uploads/
